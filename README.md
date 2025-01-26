@@ -19,9 +19,9 @@ the initial point in the pattern for which the rule is broken.
 
 ## Code
 
-**app.py:** A simple script that loads a dataset, generates a control chart image and runs the
+- **app.py:** A simple script that loads a dataset, generates a control chart image and runs the
 rules.
-**rules.py:** A collection of rules that implement the _sensitizing rules_ above (with the exception
+- **rules.py:** A collection of rules that implement the _sensitizing rules_ above (with the exception
 of the vague rule **9**).
-**utils.py:** The implemenation of a helper function for the _sliding window technique_ and an
+- **utils.py:** The implemenation of a helper function for the _sliding window technique_ and an
 algorithm to detect cycles.
