@@ -7,7 +7,7 @@ the initial point in the pattern for which the rule is broken.
   1. One or more points outside of the control limits (three-sigma)
   2. Two of three consecutive points outside the two-sigma warning limits butstill inside the control limits
   3. Four of five consecutive points beyond the one-sigma limit
-  4. A run of eight consecutive points on one side of the center line. In general, a *run* is defined as consecutive points. This differs from a *run up* as being consecutive points increasing (no matter the center line), and the opposite for a *run down*.
+  4. Eight consecutive points on one side of the center line. 
   ---
   5. Six points in a row steadily increasing or decreasing
   6. Fifteen points in a row within Zone C, alternating up and down (cyclic)

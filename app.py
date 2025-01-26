@@ -6,13 +6,13 @@ import pandas as pd
 from rules import rules
 
 
-def generate_control_chart(data, mean, std, suffix=""):
+def generate_control_chart(data: list[float], mean: float, std: float, suffix: str="") -> None:
     plt.style.use('_mpl-gallery')
     fig, ax = plt.subplots(figsize=(12, 6))
-    
+
     x = range(1, len(data)+1)
     ax.plot(x, data, 'o-')
-    
+
     ax.plot(x, [mean]*len(x), color='green', label='mean')
     ax.plot(x, [mean + std]*len(x), color='purple', label='URL')
     ax.plot(x, [mean - std]*len(x), color='purple', label='LRL')
@@ -20,11 +20,11 @@ def generate_control_chart(data, mean, std, suffix=""):
     ax.plot(x, [mean - (2*std)]*len(x), color='yellow', label='LWL')
     ax.plot(x, [mean + (3*std)]*len(x), color='red', label='UCL')
     ax.plot(x, [mean - (3*std)]*len(x), color='red', label='LCL')
-    
+
     ax.set_xlim(1, len(data)+1)
     ax.xaxis.set_major_locator(ticker.MaxNLocator(integer=True))
     ax.yaxis.set_major_locator(ticker.MaxNLocator(integer=True))
-    
+
     plt.title(f"Control Chart - {datafile}")
     plt.legend()
     plt.savefig(f"images/control-chart{suffix}.png", bbox_inches='tight')
